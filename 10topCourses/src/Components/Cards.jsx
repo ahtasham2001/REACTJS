@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./Card"
+import Card from './Card';
 
 const Cards = (props)=>{
     let courses = props.courses
@@ -16,9 +16,9 @@ const Cards = (props)=>{
     return(
         <div>
             {
-                getCourses().map((course)=>(
-                    <Card key= {course.id}/>
-                ))
+                getCourses().map((course)=>{
+                    return <Card course = {course} key={props.courses.id}/>
+                })
             }
         </div>
     )

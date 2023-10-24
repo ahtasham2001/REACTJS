@@ -8,7 +8,7 @@ import Spinner from "./Components/Spinner"
 import {toast} from "react-toastify"
 
 function App() {
-const [courses, setCoourses] = useState(null);
+const [courses, setCoourses] = useState([]);
 const [loading , setloading] = useState(true)
 
 
@@ -17,7 +17,7 @@ async function fetchData() {
   try {
     let response = await fetch(apiUrl);
     let output = await response.json();
-    setCoourses(output); 
+    setCoourses(output.data); 
   } catch (error) {
     toast.error("Network Issue Brow")
   }
