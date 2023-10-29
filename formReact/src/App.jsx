@@ -2,6 +2,7 @@ import { useState } from "react"
 
 function App() {
   const [formData , setformData] = useState({firstName: "", lastName: "", email: ""});
+  console.log(formData)
   function changeHandler(event) {
     setformData(preFormData =>{
       return{
@@ -18,6 +19,7 @@ function App() {
         type="text" 
         placeholder='Enter Your First Name here'
         onChange={changeHandler}
+        name="firstName"
          />
          <br />
          <br />
@@ -25,6 +27,7 @@ function App() {
         type="text" 
         placeholder='Enter Your Last Name here'
         onChange={changeHandler}
+        name="lastName"
          />
          <br />
          <br />
@@ -32,6 +35,7 @@ function App() {
         type="text" 
         placeholder='Enter Your Email here'
         onChange={changeHandler}
+        name="email"
          />
       </form>
     </div>
