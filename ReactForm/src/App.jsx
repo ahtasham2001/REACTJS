@@ -3,7 +3,7 @@ import './App.css'
 
 function App() {
   const [formData, setformData] = useState({
-    firstName: ""
+    firstName: "", lastName:"", email:"", country:""
   })
 
   function changeHandler(event) {
@@ -28,28 +28,35 @@ function App() {
           className="outline"
         />
         <br /><br />
-        <label htmlFor="firstName">First Name</label><br />
+        <label htmlFor="firstName">Last Name</label><br />
         <input
           type="text"
-          name='firstName'
-          placeholder='Enter Your F Name'
+          name='lastName'
+          placeholder='Enter Your L Name'
           id='firstName'
-          value={FormData.firstName}
+          value={FormData.lastName}
           onChange={changeHandler}
           className="outline"
         />
         <br /><br />
-        <label htmlFor="firstName">First Name</label><br />
+        <label htmlFor="firstName">Email</label><br />
         <input
           type="text"
-          name='firstName'
-          placeholder='Enter Your F Name'
-          id='firstName'
-          value={FormData.firstName}
+          name='email'
+          placeholder='Enter Your Email'
+          id='email'
+          value={FormData.email}
           onChange={changeHandler}
           className="outline"
         />
         <br /><br />
+        <label htmlFor="country">Country</label><br />
+        <select name="country" id="country" value={formData.country}>
+          <option value="paksitan">Pakistan</option>
+          <option value="plasten">Plasten</option>
+          <option value="iraq">Iraq</option>
+          <option value="iran">Iran</option>
+        </select>
       </form>
     </div>
   )
